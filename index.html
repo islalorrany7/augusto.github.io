@@ -1,40 +1,248 @@
-MINHA HISTÓRIA
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prof. Interplay | Jornada no Espaço-Tempo</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Rajdhani:wght@300;500;700&display=swap');
 
-Sou apaixonado por tecnologia desde muito cedo. Sempre fui aquele tipo “nerd” que se encanta com estrelas, espaço, games e filmes de ficção científica. Meu primeiro contato com computadores foi ainda nos anos 90, e desde então nunca mais me afastei desse universo.
+        body {
+            background-color: #050505;
+            color: #e0e0e0;
+            font-family: 'Rajdhani', sans-serif;
+            overflow-x: hidden;
+        }
 
-Em 2000, me mudei para Caicó e dei um passo importante na minha trajetória: fundei a primeira lan house do Rio Grande do Norte, a Interplay. Esse foi um momento marcante, pois além de trabalhar com tecnologia, comecei a perceber o quanto gostava de compartilhar conhecimento.
+        h1, h2, h3, .font-space {
+            font-family: 'Orbitron', sans-serif;
+        }
 
-Por volta de 2001, comecei a criar tutoriais, ensinando desde instalações básicas até a criação de servidores de jogos. Foi aí que, sem perceber, nasceu minha vocação como professor.
+        .stars-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background: radial-gradient(ellipse at bottom, #1B2735 0%, #090A0F 100%);
+            overflow: hidden;
+        }
 
-CARREIRA NA EDUCAÇÃO
+        .star {
+            position: absolute;
+            background: white;
+            border-radius: 50%;
+            opacity: 0.5;
+            animation: twinkle var(--duration) infinite ease-in-out;
+        }
 
-Em 2007, surgiu a oportunidade de lecionar na Microlins. Comecei com turmas de Corel e Photoshop (mesmo não sendo fã de desenho), e logo expandi para áreas como manutenção de computadores, redes, informática básica e programação.
+        @keyframes twinkle {
+            0%, 100% { opacity: 0.3; transform: scale(1); }
+            50% { opacity: 1; transform: scale(1.2); }
+        }
 
-Em 2009, iniciei minha jornada no SENAI, onde permaneci até 2018. Esse período foi extremamente importante para minha formação profissional e pessoal, consolidando minha experiência como educador.
+        .neon-border {
+            box-shadow: 0 0 15px rgba(0, 255, 255, 0.3), inset 0 0 15px rgba(0, 255, 255, 0.3);
+            border: 1px solid rgba(0, 255, 255, 0.5);
+        }
 
-Após a saída do SENAI, passei um tempo longe das salas de aula. Em 2021, tentei retornar como professor substituto no EETIJA, mas naquela ocasião não foi possível. Ainda assim, não desisti.
+        .glass-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
 
-O RETORNO
+        .glass-card:hover {
+            background: rgba(255, 255, 255, 0.07);
+            border-color: rgba(0, 255, 255, 0.5);
+            transform: translateY(-5px);
+        }
 
-Recentemente, fui aprovado em concurso e finalmente retornei ao EETIJA. Hoje, tenho a satisfação de dizer que estou de volta ao que sempre amei fazer: ensinar.
+        .timeline-line {
+            width: 2px;
+            background: linear-gradient(to bottom, #00ffff, #bc13fe);
+        }
 
-Vocês, meus alunos, são as primeiras turmas do ensino médio que tive a oportunidade de lecionar. Confesso que senti medo no início, afinal, depois de tanto tempo longe da sala de aula, surgem dúvidas: será que vou conseguir? será que vão gostar de mim?
+        .glow-text {
+            text-shadow: 0 0 10px rgba(0, 255, 255, 0.8);
+        }
 
-Mas, felizmente, fui muito bem recebido. Criamos uma conexão leve, com espaço para aprender, conversar, rir e crescer juntos.
-Mais do que Ensinar
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #050505;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #00ffff;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
 
-Para mim, dar aula vai muito além do conteúdo. Estar com vocês, compartilhar experiências, aprender juntos e até mesmo “conversar besteira” faz parte do processo.
+    <!-- Fundo de Estrelas -->
+    <div id="stars" class="stars-container"></div>
 
-Essa troca me fortalece, me motiva e me ajuda a seguir firme, mesmo conciliando dois empregos. Cada aula é uma oportunidade de fazer a diferença, não só como professor, mas como alguém que acredita no potencial de cada aluno.
+    <!-- Header / Hero -->
+    <header class="min-h-screen flex flex-col justify-center items-center text-center p-6">
+        <div class="relative mb-8">
+            <div class="w-48 h-48 rounded-full neon-border overflow-hidden bg-gray-900 flex items-center justify-center">
+                <i class="fas fa-user-astronaut text-6xl text-cyan-400"></i>
+            </div>
+            <div class="absolute -bottom-2 bg-cyan-500 text-black px-4 py-1 rounded-full font-bold uppercase tracking-widest text-sm">
+                Desde 1993
+            </div>
+        </div>
+        
+        <h1 class="text-4xl md:text-6xl font-bold glow-text mb-4">PROFESSOR GEEK</h1>
+        <p class="text-xl md:text-2xl text-cyan-300 max-w-2xl font-light">
+            Nerd por natureza, explorador do ciberespaço e mentor de novas gerações.
+        </p>
+        
+        <div class="mt-10 flex gap-4">
+            <a href="#historia" class="px-8 py-3 bg-cyan-600 hover:bg-cyan-500 text-white rounded-lg transition font-bold uppercase tracking-wider">A Jornada</a>
+            <a href="#contato" class="px-8 py-3 border border-cyan-500 hover:bg-cyan-500/20 text-cyan-300 rounded-lg transition font-bold uppercase tracking-wider">Contato</a>
+        </div>
+    </header>
 
-E é exatamente isso que me faz continuar.
+    <!-- Seção Interplay / Origem -->
+    <section id="historia" class="py-20 px-6 max-w-6xl mx-auto">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+            <div class="glass-card p-8 rounded-2xl">
+                <h2 class="text-3xl font-bold text-cyan-400 mb-6 flex items-center gap-3">
+                    <i class="fas fa-gamepad"></i> O Início: Interplay
+                </h2>
+                <p class="text-lg leading-relaxed mb-4 text-gray-300">
+                    Em 2000, desembarquei em <span class="text-white font-bold">Caicó</span> com um sonho tecnológico. Fundei a <span class="text-cyan-400 font-bold">Interplay</span>, a primeira lan house do Rio Grande do Norte. Ali não era apenas um negócio, era o hub da revolução digital local.
+                </p>
+                <p class="text-lg leading-relaxed text-gray-300">
+                    Foi entre servidores de jogos e tutoriais de instalação em 2001 que descobri minha verdadeira vocação: <span class="text-purple-400 italic">ensinar</span>.
+                </p>
+            </div>
+            <div class="grid grid-cols-2 gap-4">
+                <div class="glass-card p-6 rounded-xl text-center">
+                    <i class="fas fa-microchip text-4xl text-cyan-500 mb-3"></i>
+                    <h3 class="font-bold">Hardware</h3>
+                    <p class="text-sm opacity-70">Manutenção desde os 90s</p>
+                </div>
+                <div class="glass-card p-6 rounded-xl text-center">
+                    <i class="fas fa-network-wired text-4xl text-purple-500 mb-3"></i>
+                    <h3 class="font-bold">Redes</h3>
+                    <p class="text-sm opacity-70">Estruturando conexões</p>
+                </div>
+                <div class="glass-card p-6 rounded-xl text-center">
+                    <i class="fas fa-code text-4xl text-green-500 mb-3"></i>
+                    <h3 class="font-bold">Programação</h3>
+                    <p class="text-sm opacity-70">Criando lógica</p>
+                </div>
+                <div class="glass-card p-6 rounded-xl text-center">
+                    <i class="fas fa-rocket text-4xl text-orange-500 mb-3"></i>
+                    <h3 class="font-bold">Sci-Fi</h3>
+                    <p class="text-sm opacity-70">Mente no espaço</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-FORMAÇÃO NO IFRN:
-<img width="800" height="533" alt="formação do ifrn" src="https://github.com/user-attachments/assets/73afc84b-05c0-4324-9446-1ffb7975b226" />
+    <!-- Timeline Docente -->
+    <section class="py-20 bg-black/40">
+        <div class="max-w-4xl mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-16 glow-text">LOG DE MISSÕES (CARREIRA)</h2>
+            
+            <div class="relative">
+                <div class="absolute left-0 md:left-1/2 transform md:-translate-x-1/2 h-full timeline-line"></div>
+                
+                <!-- Microlins -->
+                <div class="mb-12 flex justify-between items-center w-full right-timeline">
+                    <div class="order-1 w-5/12 hidden md:block"></div>
+                    <div class="z-20 flex items-center order-1 bg-cyan-500 shadow-xl w-8 h-8 rounded-full">
+                        <h1 class="mx-auto font-semibold text-lg text-black">1</h1>
+                    </div>
+                    <div class="order-1 glass-card rounded-lg shadow-xl w-full md:w-5/12 px-6 py-4">
+                        <h3 class="mb-1 font-bold text-cyan-400 text-xl">Microlins (2007)</h3>
+                        <p class="text-sm leading-snug tracking-wide text-gray-400">Primeiro contato oficial como professor. Enfrentei o Corel e Photoshop (mesmo não gostando de desenhar!) e logo migrei para minha paixão: manutenção e redes.</p>
+                    </div>
+                </div>
 
-DANDO AULA  EM SÃO JOSÉ PELO SENAI:
-<img width="640" height="480" alt="ensinando no senai" src="https://github.com/user-attachments/assets/5cc66a84-cf74-4f66-976d-f932a3acebb2" />
+                <!-- Senai -->
+                <div class="mb-12 flex justify-between flex-row-reverse items-center w-full left-timeline">
+                    <div class="order-1 w-5/12 hidden md:block"></div>
+                    <div class="z-20 flex items-center order-1 bg-purple-500 shadow-xl w-8 h-8 rounded-full">
+                        <h1 class="mx-auto text-black font-semibold text-lg">2</h1>
+                    </div>
+                    <div class="order-1 glass-card rounded-lg shadow-xl w-full md:w-5/12 px-6 py-4">
+                        <h3 class="mb-1 font-bold text-purple-400 text-xl">SENAI (2009 - 2018)</h3>
+                        <p class="text-sm leading-snug tracking-wide text-gray-400">Quase uma década formando profissionais. Uma fase de muito crescimento que se encerrou com o fechamento da unidade, deixando um hiato nas salas de aula.</p>
+                    </div>
+                </div>
 
-MAIS AULAS:
-<img width="1080" height="801" alt="aulas1" src="https://github.com/user-attachments/assets/0ca2f64f-d8e5-489e-b4d3-034302c199c5" />
-<img width="1080" height="799" alt="aulas2" src="https://github.com/user-attachments/assets/4c8b0eec-4d4a-45f9-86e8-87391d2f8723" />
+                <!-- EETIJA Retorno -->
+                <div class="mb-12 flex justify-between items-center w-full right-timeline">
+                    <div class="order-1 w-5/12 hidden md:block"></div>
+                    <div class="z-20 flex items-center order-1 bg-green-500 shadow-xl w-8 h-8 rounded-full">
+                        <h1 class="mx-auto font-semibold text-lg text-black">3</h1>
+                    </div>
+                    <div class="order-1 glass-card rounded-lg shadow-xl w-full md:w-5/12 px-6 py-4 border-l-4 border-green-500">
+                        <h3 class="mb-1 font-bold text-green-400 text-xl">O Retorno: EETIJA (2024)</h3>
+                        <p class="text-sm leading-snug tracking-wide text-gray-400">Após uma tentativa em 2021, o destino me trouxe de volta através do concurso. O medo inicial deu lugar à alegria de estar com vocês.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mensagem para Alunos -->
+    <section class="py-20 px-6 max-w-4xl mx-auto text-center">
+        <div class="glass-card p-10 rounded-3xl border-2 border-cyan-500/30">
+            <i class="fas fa-heart text-red-500 text-4xl mb-6"></i>
+            <h2 class="text-3xl font-bold mb-6">Aos Meus Alunos do Ensino Médio</h2>
+            <p class="text-xl italic leading-relaxed text-gray-300">
+                "Vocês são as primeiras turmas do ensino médio que leciono. Confesso que tive medo no início... muito tempo longe das salas. Mas a recepção de vocês foi o meu melhor 'upgrade'. Estar com vocês, conversar besteira e compartilhar conhecimento me faz sentir jovem e forte para encarar a rotina de dois empregos. Obrigado por fazerem parte deste novo capítulo!"
+            </p>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer id="contato" class="py-10 text-center border-t border-white/10">
+        <div class="flex justify-center gap-6 mb-6">
+            <a href="#" class="text-2xl hover:text-cyan-400 transition"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="text-2xl hover:text-cyan-400 transition"><i class="fab fa-linkedin"></i></a>
+            <a href="#" class="text-2xl hover:text-cyan-400 transition"><i class="fab fa-github"></i></a>
+        </div>
+        <p class="opacity-50">© 2024 Professor Tech Caicó. Desenvolvido no Espaço-Tempo.</p>
+    </footer>
+
+    <script>
+        // Gerador de Estrelas Animadas
+        function createStars() {
+            const container = document.getElementById('stars');
+            const count = 150;
+            
+            for (let i = 0; i < count; i++) {
+                const star = document.createElement('div');
+                star.className = 'star';
+                
+                const size = Math.random() * 3;
+                const top = Math.random() * 100;
+                const left = Math.random() * 100;
+                const duration = 2 + Math.random() * 5;
+                
+                star.style.width = `${size}px`;
+                star.style.height = `${size}px`;
+                star.style.top = `${top}%`;
+                star.style.left = `${left}%`;
+                star.style.setProperty('--duration', `${duration}s`);
+                
+                container.appendChild(star);
+            }
+        }
+
+        window.onload = createStars;
+    </script>
+</body>
+</html>
